@@ -1,0 +1,1164 @@
+@charset "utf-8";
+/* CSS Intern Huge */
+
+/*:: START RESET ::*/
+/* `XHTML, HTML4, HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+/*
+  Override the default (display: inline) for
+  browsers that do not recognize HTML5 tags.
+  IE8 (and lower) requires a shiv:
+  http://ejohn.org/blog/html5-shiv
+*/
+  display: block;
+}
+
+b,
+strong {
+/*
+  Makes browsers agree.
+  IE + Opera = font-weight: bold.
+  Gecko + WebKit = font-weight: bolder.
+*/
+  font-weight: bold;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+/*
+  For IE.
+  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+  -ms-interpolation-mode: bicubic;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+/*
+  For IE6 + IE7:
+  "display: list-item" keeps bullets from
+  disappearing if hasLayout is triggered.
+*/
+  display: list-item;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left;
+}
+
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+sub,
+sup,
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+svg {
+/*
+  For IE9. Without, occasionally draws shapes
+  outside the boundaries of <svg> rectangle.
+*/
+  overflow: hidden;
+}
+
+/*:: END RESET ::*/
+
+/*:: START Typography ::*/
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('../fonts/raleway-extrabold-webfont.eot');
+    src: url('../fonts/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-extrabold-webfont.woff') format('woff'),
+         url('../fonts/raleway-extrabold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-extrabold-webfont.svg#ralewayextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewayheavy';
+    src: url('../fonts/raleway-heavy-webfont.eot');
+    src: url('../fonts/raleway-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-heavy-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-heavy-webfont.woff') format('woff'),
+         url('../fonts/raleway-heavy-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-heavy-webfont.svg#ralewayheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('../fonts/raleway-semibold-webfont.eot');
+    src: url('../fonts/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-semibold-webfont.woff') format('woff'),
+         url('../fonts/raleway-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewayheavy';
+    src: url('../fonts/raleway-heavy-webfont.eot');
+    src: url('../fonts/raleway-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-heavy-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-heavy-webfont.woff') format('woff'),
+         url('../fonts/raleway-heavy-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-heavy-webfont.svg#ralewayheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway-light-webfont.eot');
+    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-light-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-light-webfont.woff') format('woff'),
+         url('../fonts/raleway-light-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-light-webfont.svg#ralewaylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('../fonts/raleway-medium-webfont.eot');
+    src: url('../fonts/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-medium-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-medium-webfont.woff') format('woff'),
+         url('../fonts/raleway-medium-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-medium-webfont.svg#ralewaymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff'),
+         url('../fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaythin';
+    src: url('../fonts/raleway-thin-webfont.eot');
+    src: url('../fonts/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-thin-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-thin-webfont.woff') format('woff'),
+         url('../fonts/raleway-thin-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-thin-webfont.svg#ralewaythin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*:: END  Typography ::*/
+
+
+/*:: GENERAL ::*/
+
+body,
+html {
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+}
+body {
+    background: #fff;
+    color: #666;
+    font: normal 14px/24px 'Open Sans', Arial, sans-serif;
+}
+::-moz-selection {
+    background: #555;
+    color: #fff;
+}
+::selection {
+    background: #555;
+    color: #fff;
+}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+a:hover {
+    color: #1fb4da;
+}
+.section.alt a {
+    color: #fefefe;
+    text-decoration: underline;
+}
+.section.alt a:hover {
+    color: #ddd;
+}
+#footer a {
+    color: #f9f9f9;
+}
+#footer a:hover {
+    color: #f9f9f9;
+    text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4 {
+    color: #666;
+    display: block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+h1 {
+    font-size: 2.75em;
+}
+h2 {
+    font-size: 2.25em;
+}
+h3 {
+    font-size: 1.75em;
+}
+h4 {
+    font-size: 1.25em;
+}
+.section.alt h1,
+.section.alt h2,
+.section.alt h3,
+.section.alt h4 {
+    color: #fff;
+}
+.section h1:first-child {
+    margin-top: 0;
+}
+#intro h1 {
+    background-color: #3F3F3F;
+    color: #F9C741;
+    font-family: "ralewaysemibold";
+    font-size: 2.25em;
+    line-height: 1.389em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+#intro h1 span, #intro p span {
+  font-family: "ralewaylight";
+  font-weight: 100;
+}
+.one-rotate {  
+  behavior:url(-ms-transform.htc);  
+  -moz-transform:rotate(-2deg);  
+  -webkit-transform:rotate(-2deg);  
+  -o-transform:rotate(-2deg);  
+  -ms-transform:rotate(-2deg);  
+} 
+.two-rotate {  
+  behavior:url(-ms-transform.htc);  
+  -moz-transform:rotate(3deg);  
+  -webkit-transform:rotate(3deg);  
+  -o-transform:rotate(3deg);  
+  -ms-transform:rotate(3deg);  
+}
+#header .container16 {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 373px;
+}
+
+/*:: START Buttons ::*/
+.btn {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2px 20px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+.btn-s {
+  color: #ffffff;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2px 20px;
+  border: 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/*:: END  Buttons ::*/
+
+/*:: START Nav ::*/
+.navbar-default {
+    width: 100%;
+    height: 50px;
+    background: #3F3F3F;
+}
+.navbar-default .navbar-brand-mobile {
+    position: absolute;
+    left: 10px;
+    width: 60px;
+    height: 81px;
+    float: left;
+    z-index: 10;
+}
+.navbar-default .navbar-brand-mobile a {
+    display: block;
+    
+}
+.navbar-default .navbar-brand-mobile img {
+    display: block;
+    width: 60px;
+    height: 81px;
+}
+
+.navbar-default .navbar-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: right;
+    /*border: 1px solid;*/
+    margin: 4px 10px 4px 4px;
+}
+.navbar-default .navbar-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 0 auto;
+  margin-top: 7px;
+  margin-bottom: 8px;
+  background: #F9C741;
+}
+.nav {
+  position: relative;
+  left: -100%;
+  width: 100%;
+  background: #3F3F3F;
+  padding: 20px 0;
+}
+.nav ul {
+
+}
+.nav ul li h3 a{
+  display: block;
+  padding: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #F0F0F0;
+  text-transform: uppercase;
+}
+.nav .navbar-brand {
+    display: none;
+}
+
+/*:: END  Nav ::*/
+
+
+/*:: START  Intro ::*/
+#intro {
+    background:url(../img/intern-top-bg.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    height: 480px;
+    text-align: center;
+}
+#intro .background {
+    /*background: url('../img/overlay.png') repeat;*/
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#intro .wrapper {
+    margin-top: 180px;
+}
+#intro .column16 {
+    margin-bottom: 20px;
+}
+#intro .column16:last-child {
+    margin-bottom: 0;
+}
+#intro p {
+    font-family: "ralewaysemibold";
+    font-size: 2.25em;
+    line-height: 1.389em;
+    margin: 0 auto;
+    max-width: 700px;
+    color: #3F3F3F;
+    background-color: #F9C741;
+}
+
+/*:: END  Intro ::*/
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+}
+
+section.content {
+  padding: 40px 0;
+  background: #EFF3F3;
+}
+section.content .services-icons {
+  margin-top: 100px;
+  display: table;
+}
+section.content .services-icons .column3 {
+  padding-top: 50px;
+}
+section.content .services-icons .column4 {
+  padding-top: 40px;
+}
+section.content .services h3 {
+  font-family: "ralewayregular";
+  font-weight: 100;
+  font-size: 1.4em;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+section.content .services h3 span {
+  color: #F9C741;
+}
+section.content .services p {
+  font-size: 1.4em;
+  font-weight: 100;
+  line-height: 25px;
+  text-align: center;
+}
+section.content .icons {
+  background: url(../img/intern-sprite.png)no-repeat 0 0;
+}
+section.content .services-icons {
+  font-family: "ralewayregular";
+  font-weight: 100;
+}
+section.content .services-icons h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+section.content .services-icons p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+section.content .icons.variations {
+  display: block;
+  width: 110px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-position: -20px -78px;  
+}
+section.content .icons.time {
+  display: block;
+  width: 110px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-position: -260px -78px;
+}
+section.content .icons.revisions {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-position: -489px -24px;
+}
+section.content .icons.retina {
+  display: block;
+  width: 110px;
+  height: 90px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-position: -750px -74px;
+}
+section.content .icons.suport {
+  display: block;
+  width: 110px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-position: -975px -77px;
+}
+
+section.works{
+  padding: 40px 0;
+  background: #F9C741;
+}
+section.works .works-title {
+  margin-bottom: 5px;
+}
+section.works .works-title h3 {
+  margin-bottom: 10px;
+  font-family: 'ralewayextrabold';
+  color: #ffffff;
+}
+section.works .works-title h3 span {
+  color: #3F3F3F;
+}
+section.works p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+}
+
+section.works .projects-nav {
+  display: block;  
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+section.works .projects-nav ul {
+  display: table;
+  margin: 0 auto;
+}
+section.works .projects-nav ul li {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+section.works .projects-nav ul li .btn-s.active{
+  color: #F9C741;
+  font-weight: bold;
+  background: #3F3F3F;
+  border: 1px solid #3F3F3F;
+}
+
+section.works #projects {
+  margin: 0;
+}
+section.works #projects .item.mix {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1%;
+  display: none;
+  padding-left: 0.4%;
+  -webkit-backface-visibility: hidden;
+}
+section.works #projects .item.mix a {
+  display: block;
+}
+section.works #projects .item.mix a img {
+  display: block;
+  margin: 0 auto;
+}
+
+section#maps {
+  width: 100%; 
+  height: 800px; 
+}
+
+section.form {
+  padding: 40px 0;
+  background: #3F3F3F;
+}
+section.form .form-title {
+  margin-bottom: 5px;
+}
+section.form .form-title h3 {
+  margin-bottom: 10px;
+  font-family: 'ralewayextrabold';
+  color: #ffffff;
+}
+section.form .form-title h3 span {
+  color: #F9C741;
+}
+section.form p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+}
+section.form form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+section.form form .column8 {
+  margin-bottom: 0;
+}
+section.form form .column8 input {
+  width: 93%;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-left: 14px;
+  background: #3F3F3F;
+  border-radius: 17px;
+  border: 4px solid #ffffff;
+}
+section.form form .column16 {
+  margin-bottom: 0;
+}
+section.form form .column16 textarea {
+  width: 92%;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-left: 14px;
+  background: #3F3F3F;
+  border-radius: 17px;
+  border: 4px solid #ffffff;
+}
+section.form form input.btn-l {
+  width: 100%;
+  height: 35px;
+  margin: 0 auto;
+  padding-left: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  background: #F9C741;
+  border-radius: 17px;
+  border: 4px solid #F9C741;
+}
+section.form .form-icons ul li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+section.form .form-icons ul li a {
+  color: #ffffff;
+}
+section.form .form-icons ul li i.icon {
+  background: url(../img/intern-sprite.png)no-repeat 0 0;  
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+section.form .form-icons ul li i.icon.icons-email {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: -28px -195px;
+}
+section.form .form-icons ul li i.icon.icons-adress {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: -506px -198px;
+}
+section.form .form-icons ul li i.icon.icons-phone {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: -751px -198px;
+}
+section.form .form-icons ul li i.icon.icons-website {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: -990px -199px;
+}
+
+
+footer {
+  background: #F9C741;
+    padding-top: 50px;
+  padding-bottom: 30px;
+}
+footer .footer-icons {
+  display: block;
+}
+footer .footer-icons ul {
+  display: table;
+  margin: 0 auto; 
+}
+footer .footer-icons ul li {
+  float: left;
+  margin-left: 40px;
+}
+footer .footer-icons ul li a {
+  display: block;
+}
+footer .footer-icons .icon {
+  background: url(../img/intern-sprite.png)no-repeat 0 0;
+  text-indent: -9999999px;
+  margin-bottom: 20px;
+}
+
+footer .footer-icons .icons-twitter {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: -21px -259px;
+}
+footer .footer-icons .icons-facebook {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: -110px -259px;
+}
+footer .footer-icons .icons-googleplus {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: -204px -259px;
+}
+footer .footer-icons .icons-pinterest {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: -288px -259px;
+}
+footer .footer-icons .icons-linkedin {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: -381px -259px;
+}
+footer .footer-icons .icons-dribbble {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: -471px -259px;
+}
+footer .footer-icons .icons-instagram {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: -563px -259px;
+}
+
+/*Media Queries*/
+@media screen and (min-width: 479px) {
+  #intro h1.one-rotate {  
+    width: 90%;
+    margin: 0 auto;
+    line-height: 60px;
+    margin-bottom: 6px;  
+  }
+  #intro p.two-rotate {  
+    width: 85%;
+    margin: 0 auto;
+    line-height: 60px;  
+  }
+  section.form form .column8 input{
+    width: 95%;
+  }
+  section.form form .column16 textarea {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #intro h1.one-rotate {  
+    width: 60%;
+    margin: 0 auto;
+    line-height: 60px;
+    margin-bottom: 6px;  
+  }
+  #intro p.two-rotate {  
+    width: 52%;
+    margin: 0 auto;
+    line-height: 60px;  
+  }
+  section.works #projects .item.mix {
+    width: 49%;
+  }
+  section.form form .column8 input{
+    width: 90%;
+    display: block;
+  }
+  section.form form .column16 textarea {
+    width: 95%;
+    display: block;
+  }
+  section.form form input.btn-l {
+    width: 95%;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #intro .background {
+    height: 79px;
+  }
+  #intro h1.one-rotate {  
+    width: 45%;
+    margin: 0 auto;
+    line-height: 60px;
+    margin-bottom: 6px;  
+  }
+  #intro p.two-rotate {  
+    width: 40%;
+    margin: 0 auto;
+    line-height: 60px;  
+  }
+  section.works #projects .item.mix {
+    width: 19.2%;
+  }
+  /*Menu*/
+  #header {
+    position: static;
+    width: 100%;
+    height: 60px;
+    background: #3F3F3F;
+  }
+  section.content {
+    padding: 100px 0;
+  }
+  /*:: START Nav ::*/
+  .navbar-default {
+      display: none;
+  }
+  .nav {
+    position: static;
+    width: 98%;
+    background: #3F3F3F;
+    padding: 0;
+  
+    display:  table;
+    margin: 0 auto;
+}
+  .nav ul {
+
+  }
+  .nav ul li h3 a{
+    display: block;
+    padding: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #F0F0F0;
+    text-transform: uppercase;
+  }
+  .nav ul.menu-left {
+    float: left;
+    display: table;
+    width: 45%;
+  
+    padding-top: 8px;
+}
+  .nav ul.menu-left li {
+    display: inline;
+    float: left;
+  
+    margin-left: 25px;
+}
+  .nav ul.menu-right {
+    float: left;
+    display: table;
+    width: 44%;
+  
+    padding-top: 8px;
+}
+  .nav ul.menu-right li {
+    display: inline;
+    float: left;
+  
+    margin-left: 25px;
+}
+  .nav .navbar-brand {
+      position: relative;
+      display: block;
+      float: left;
+  }
+  .nav .navbar-brand a {
+    dispay: block;
+  }
+  .nav .navbar-brand a img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  /*:: END  Nav ::*/
+  section.form form {
+    margin-top: 70px;
+  }
+  section.form form .column16 textarea {
+    width: 95%;
+    height: 180px;
+    display: block;
+  }
+  section.form .form-icons {
+    margin-top: 80px;
+  
+}
+  section.form .form-icons ul li {
+    width: 20%;
+    display: block;
+    float: left;
+    margin: 0 auto;
+}  
+
+}
+
+@media screen and (min-width: 1160px) {
+  .nav ul.menu-left {
+    width: 45.5%;
+  
+  }
+  .nav ul.menu-left li {
+    margin-left: 40px;
+  }
+  .nav ul.menu-right {
+    width: 44%;
+  }
+  .nav ul.menu-right li {
+    margin-left: 25px;
+  
+    margin-right: 15px;
+  }
+  section.form .form-title h3 {
+    font-size: 35px;
+  }
+
+}
+
+
+@media screen and (min-width: 1280px) {
+  #intro {
+    height: 550px;
+  }
+  #intro .wrapper {
+    margin-top: 180px;
+  }
+  #intro h1.one-rotate {
+    font-size: 50px;
+    width: 55%;
+    line-height: 80px;
+    margin-bottom: 20px;
+  }
+  #intro p.two-rotate {
+    font-size: 50px;
+    width: 49%;  
+    line-height: 80px;
+  }
+  .one-rotate {  
+  behavior:url(-ms-transform.htc);  
+  -moz-transform:rotate(-4deg);  
+  -webkit-transform: rotate(-4deg);  
+  -o-transform:rotate(-4deg);  
+  -ms-transform:rotate(-4deg);  
+  } 
+
+  .nav ul.menu-left {
+    width: 38.5%;
+    padding-top: 10px;
+    padding-left: 95px;
+}
+  .nav ul.menu-left li {
+    margin-left: 22px;
+    margin-right: 22px;
+}
+  .nav ul.menu-right {
+    width: 44%;
+  
+    padding-top: 10px;
+}
+  .nav ul.menu-right li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .nav ul li h3 a {
+    font-size: 12px;
+  }
+  section.content {
+    padding: 140px 0;
+  }
+  section.works {
+    padding: 140px 0;
+  }
+  section.works .works-title h3 {
+    margin-bottom: 25px;
+    font-size: 38px;
+    font-family: 'ralewayextrabold';
+    color: #ffffff;
+  }
+
+}
